@@ -1,0 +1,11 @@
+/***************************底部颜色****************************/
+.i4_div_bottom{
+    background-color: white;
+    color: black;
+}
+.container{
+    background:white !important;
+}
+.layui-nav.right{
+    color: black;
+}

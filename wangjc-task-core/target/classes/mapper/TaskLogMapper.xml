@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wangjc.task.mapper.TaskLogMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.taskid as taskid, 
+        t.run_type as runType, 
+        t.run_time as runTime, 
+        t.success as success
+    </sql>
+
+    <select id="selectPage" parameterType="com.wangjc.task.entity.dto.TaskLogDto"
+            resultType="com.wangjc.task.entity.view.TaskLogView">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM t_task_log AS t
+
+    </select>
+
+</mapper>

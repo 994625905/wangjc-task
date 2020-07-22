@@ -1,0 +1,89 @@
+/****************body体置黑**************/
+body{
+    background-color: black;
+}
+
+/******************菜单选项卡****************/
+.page-content .layui-tab-title{
+    background: #292929;
+    color: darkgray;
+}
+.page-content .layui-tab-title .layui-this{
+    background: black;
+    color: white;
+}
+/******************条件搜索框****************/
+.search-fieldset{
+    border-color: #b5a5a5;
+    color: white;
+}
+/*********************table的设置*******************/
+.layui-form, .layui-border-box, .layui-table-view{
+    border-color:#676055;
+    background-color:black;
+    color: white;
+}
+.layui-table-tool{
+    background-color: black;
+    border-color:#676055;
+}
+.layui-table {
+    background-color: black;
+    color: white;
+    border-color:#676055;
+}
+.layui-table thead tr{
+    background-color: black;
+}
+.layui-table tbody tr:hover {
+    background-color: #3a3838;
+}
+.layui-table-tool .layui-inline[lay-event]{
+    color: wheat;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em{
+    background-color: #383232;
+}
+.layui-laypage button, .layui-laypage input{
+    background-color: #383232;
+    color: wheat;
+}
+.layui-laypage select{
+    background-color: #383232;
+    color: wheat;
+}
+.layui-laypage span{
+    color: white;
+}
+/**************************form元素的设置*****************************/
+.layui-input, .layui-select, .layui-textarea{
+    background-color: #3a3838;
+    color: wheat;
+}
+.layui-form-select dl{
+    background-color: black;
+}
+
+/****************************面板************************************/
+.layui-colla-title{
+    color: wheat;
+    background-color: #3a3838;
+}
+.layui-card{
+    background-color: #2d3035;
+    color: white;
+}
+.layui-card-header{
+    color: wheat;
+}
+
+/**************************按钮组的设置*****************************/
+.layui-btn-primary{
+    background-color: #2d3035;
+    color: #6a6c70;
+}
+
+/**************************a标签的设置*****************************/
+.i4_a{
+    background-color: cadetblue;
+}

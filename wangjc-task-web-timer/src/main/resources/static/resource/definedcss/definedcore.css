@@ -1,0 +1,115 @@
+/**配置透明弹框样式*/
+body .layer-tst{
+    /*box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);*/
+    box-shadow: 0px 2px 10px rgba(41, 12, 127, 0.2);
+    background: none;
+}
+
+/*.search-fieldset{*/
+    /*border-color: black;*/
+/*}*/
+.search-div{
+    margin-top: -7px;
+}
+.search-legend{
+    font-family: cursive;
+    font-style: italic;
+}
+.search-button{
+    background-color:black;
+    color: white;
+}
+.i4-button{
+    background-color:#015FEB;
+    color: white;
+}
+.i4-button-msg{
+    background-color:#4B2198;
+    color: white;
+}
+/** 右上角标志 */
+.right_top_sign{
+    float: right;
+    margin-top: 10px;
+}
+/** 右下角标志 */
+.right_down_sign{
+    float: right;
+    margin-top: 10px;
+}
+/***************************底部主题****************************/
+.i4_div_bottom{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    /*background-color: #cbd3da;*/
+    background-color: #eeeeee;
+    color: black;
+    border: 1px solid;
+    z-index: 9999;
+}
+
+/*******************************主题按钮*******************************/
+.btn-theme-default{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    color:black;
+    background-color: whitesmoke;
+}
+.btn-theme-white{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    color:black;
+    background-color: white;
+}
+.btn-theme-blue{
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    color:white;
+    background-color: midnightblue;
+}
+.btn-theme-black{
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    color:white;
+    background-color: black;
+}
+.btn-theme-wood{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    color:black;
+    background-color: burlywood;
+}
+
+/**************************a标签的设置*****************************/
+.i4_a{
+    color: blue;
+}
+.i4_a_tableTitle{
+    color: green;
+}
+/***************************弹框的title****************************/
+.layui-layer-title{
+    color: white;
+    background-color: #585858;
+}
+/***************************表单项提示****************************/
+.layui-form-label{
+    width: inherit;
+    margin-right: -15px;
+}
+/***************************卡片面版****************************/
+.i4_card{
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+/***************************layer弹框皮肤***********************/
+body .layer-skin .layui-layer-title{
+    background:#c00;
+    color:#fff; border: none;
+}
