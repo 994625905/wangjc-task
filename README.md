@@ -35,6 +35,8 @@
 - ##### 1.创建类继承ThreadPoolTaskExecutor，重写方法。用于更好的管理和监测线程情况，假如需要相关线程的信息的话，可直接在子类中操作；
 
 
+
+
     import org.slf4j.Logger;
     import org.slf4j.LoggerFactory;
     import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
@@ -114,6 +116,8 @@
 - ##### 2.配置线程池
 
 
+
+
     import org.slf4j.Logger;
     import org.slf4j.LoggerFactory;
     import org.springframework.beans.factory.annotation.Value;
@@ -183,6 +187,8 @@
 - #####4.在wangjc-task-web-timer模块的core包下创建对应的业务类，编写核心业务代码，标注任务唯一标识常量，用于验证任务状态和记录日志时使用；
 
 
+
+
     import org.slf4j.Logger;
     import org.slf4j.LoggerFactory;
     import org.springframework.stereotype.Component;
@@ -216,6 +222,8 @@
 > 我这里做了定时任务的两种设置模式，自己看需求取舍
 
 - 1.用@Async注解声明类，单独开辟新的线程异步处理。采用@Scheduled(cron = "0 0/5 * * * ?")来设置定时，注入核心业务core的bean，在@Scheduled声明的方法中调用业务方法，相对简单易读。但是corn表达式不可在web层动态的变更，必须手动来更改代码层，然后重启应用；
+
+
 
 
     import com.wangjc.task.core.TestRunCore;
@@ -258,6 +266,8 @@
 - 2.实现SchedulingConfigurer接口，重写configureTasks（）方法，然后在里面调用addTriggerTask（）方法，分别填入任务线程和触发器，
 - 这里的任务是单独开辟线程来执行，无需注解声明异步，触发器中来获取数据表中的corn，可以在页面修改变更，动态的注入定时规则。
 > 但是，修改定时规则后，不会立刻触发新的定时规则，它只能在旧规则触发时，然后新的规则生效，eg:假如把凌晨1点的任务改为凌晨2点，改动后的第一次触发，只有到了凌晨1点时，才会激活新的规则
+
+
 
 
     import com.wangjc.task.core.TestByImplCore;
@@ -334,6 +344,8 @@
     
 
 - #####6.在wangjc-task-web-timer模块的web.hand下的TaskHandController新增方法，（如果新增的任务允许被手动触发的话，不允许就不用添加），根据任务有无参数的设定来新增数据接口
+
+
 
 
     import com.wangjc.task.base.result.ActionResult;
