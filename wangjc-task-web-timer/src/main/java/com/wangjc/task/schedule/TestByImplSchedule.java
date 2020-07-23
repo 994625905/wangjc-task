@@ -26,6 +26,7 @@ public class TestByImplSchedule extends WangjcTaskSchedule implements Scheduling
 
     private static final Logger logger = LoggerFactory.getLogger(TestByImplSchedule.class);
 
+
     @Autowired
     private TestByImplCore testByImplCore;
 
@@ -64,7 +65,6 @@ public class TestByImplSchedule extends WangjcTaskSchedule implements Scheduling
             public Date nextExecutionTime(TriggerContext triggerContext) {
                 String taskDate = getTaskDate(testByImplCore.TASK_SSID);
                 logger.info("测试实现SchedulingConfigurer来动态注入规则：[{}]",taskDate);
-
                 CronTrigger trigger = new CronTrigger(taskDate);
                 return trigger.nextExecutionTime(triggerContext);
             }
